@@ -8,7 +8,7 @@ using ArkRemoteAdmin.Core;
 using ArkRemoteAdmin.Data;
 using ArkRemoteAdmin.Properties;
 using ArkRemoteAdmin.UserInterface;
-using BssFramework.Windows.Forms;
+//using BssFramework.Windows.Forms;
 using Rcon;
 using Rcon.Commands;
 
@@ -23,8 +23,8 @@ namespace ArkRemoteAdmin
         {
             InitializeComponent();
 
-            toolStrip.Renderer = new SevenToolStripRenderer();
-            cmsTray.Renderer = new SevenToolStripRenderer();
+            //toolStrip.Renderer = new SevenToolStripRenderer();
+            //cmsTray.Renderer = new SevenToolStripRenderer();
 
             players.SetStatus = SetStatus;
             server.SetStatus = SetStatus;
@@ -43,9 +43,9 @@ namespace ArkRemoteAdmin
             if (Updater.Exists())
                 Updater.CheckSilent();
 
-            Version version = await Updater.CheckWebVersion();
-            if (version != null)
-                notifyIcon.ShowBalloonTip(3000, "Update available", $"A new version ({version}) is available. Click here to get it!", ToolTipIcon.Info);
+            //Version version = await Updater.CheckWebVersion();
+            //if (version != null)
+                //notifyIcon.ShowBalloonTip(3000, "Update available", $"A new version ({version}) is available. Click here to get it!", ToolTipIcon.Info);
 
             // Register Events
             ArkRcon.Client.Connecting += Client_Connecting;
@@ -65,15 +65,17 @@ namespace ArkRemoteAdmin
                 }
                 catch (Exception ex)
                 {
-                    new TaskDialog()
-                    {
-                        WindowTitle = "Connection failed",
-                        MainInstruction = ex.Message,
-                        Content = "Make sure that the server is online and configured correctly.",
-                        CommonButtons = TaskDialogCommonButtons.Ok,
-                        MainIcon = TaskDialogIcon.Warning,
-                        PositionRelativeToWindow = true
-                    }.Show(this);
+                    MessageBox.Show(ex.Message);
+
+                    //new TaskDialog()
+                    //{
+                    //    WindowTitle = "Connection failed",
+                    //    MainInstruction = ex.Message,
+                    //    Content = "Make sure that the server is online and configured correctly.",
+                    //    CommonButtons = TaskDialogCommonButtons.Ok,
+                    //    MainIcon = TaskDialogIcon.Warning,
+                    //    PositionRelativeToWindow = true
+                    //}.Show(this);
                 }
             }
         }
@@ -140,15 +142,17 @@ namespace ArkRemoteAdmin
                 {
                     syncContext.Send(state =>
                     {
-                        new TaskDialog()
-                        {
-                            WindowTitle = "Reconnect failed",
-                            MainInstruction = "Reconnect failed",
-                            Content = "Make sure that the server is online and configured correctly.",
-                            CommonButtons = TaskDialogCommonButtons.Ok,
-                            MainIcon = TaskDialogIcon.Warning,
-                            PositionRelativeToWindow = true
-                        }.Show(this);
+                        MessageBox.Show("Make sure the server is online and configured", "Reconnection Failed");
+
+                        //new TaskDialog()
+                        //{
+                        //    WindowTitle = "Reconnect failed",
+                        //    MainInstruction = "Reconnect failed",
+                        //    Content = "Make sure that the server is online and configured correctly.",
+                        //    CommonButtons = TaskDialogCommonButtons.Ok,
+                        //    MainIcon = TaskDialogIcon.Warning,
+                        //    PositionRelativeToWindow = true
+                        //}.Show(this);
                     }, null);
                 }
             }
@@ -207,7 +211,7 @@ namespace ArkRemoteAdmin
 
         private void tsExitServer_Click(object sender, EventArgs e)
         {
-            if (MessageBoxEx.Show(this, "Exit Server", "Are you sure you want to shut down the server?", "Be sure to save your world before you should the server down.", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show( "Are you sure you want to shut down the server?\r\nBe sure to save your world before you should the server down.", "Exit Server", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 ArkRcon.Client.ExecuteCommandAsync(new DoExit(), ServerExited);
             }
@@ -319,7 +323,7 @@ namespace ArkRemoteAdmin
 
         private void notifyIcon_BalloonTipClicked(object sender, EventArgs e)
         {
-            BssFramework.Utils.OpenWebsite(new Uri("http://steamcommunity.com/app/346110/discussions/0/530646715638980889/"));
+            //BssFramework.Utils.OpenWebsite(new Uri("http://steamcommunity.com/app/346110/discussions/0/530646715638980889/"));
         }
     }
 

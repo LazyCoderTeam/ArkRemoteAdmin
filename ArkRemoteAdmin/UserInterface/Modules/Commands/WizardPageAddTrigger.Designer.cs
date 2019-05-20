@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WizardPageAddTrigger));
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.listView1 = new BssFramework.Windows.Forms.ListViewEx();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.colType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colParams = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -128,7 +128,7 @@
         #endregion
 
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
-        private BssFramework.Windows.Forms.ListViewEx listView1;
+        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader colType;
         private System.Windows.Forms.ColumnHeader colParams;
         private System.Windows.Forms.ToolStrip toolStrip1;

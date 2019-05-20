@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkRemoteAdmin", "ArkRemoteAdmin\ArkRemoteAdmin.csproj", "{B12112E0-704A-45D9-9436-5157B1CE0975}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rcon", "..\ArkRcon\Rcon\Rcon.csproj", "{7ED89C07-1348-46AE-BCE8-D07E2DCDD7A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B12112E0-704A-45D9-9436-5157B1CE0975}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B12112E0-704A-45D9-9436-5157B1CE0975}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B12112E0-704A-45D9-9436-5157B1CE0975}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ED89C07-1348-46AE-BCE8-D07E2DCDD7A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED89C07-1348-46AE-BCE8-D07E2DCDD7A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED89C07-1348-46AE-BCE8-D07E2DCDD7A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED89C07-1348-46AE-BCE8-D07E2DCDD7A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

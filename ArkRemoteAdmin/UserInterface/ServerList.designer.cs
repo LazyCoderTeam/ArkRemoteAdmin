@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServerList));
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.lvServers = new BssFramework.Windows.Forms.ListViewEx();
+            this.lvServers = new System.Windows.Forms.ListView();
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colHost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colPort = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -319,7 +319,7 @@
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripButton tsbAdd;
-        private BssFramework.Windows.Forms.ListViewEx lvServers;
+        private System.Windows.Forms.ListView lvServers;
         private System.Windows.Forms.ColumnHeader colName;
         private System.Windows.Forms.ColumnHeader colHost;
         private System.Windows.Forms.ColumnHeader colPort;

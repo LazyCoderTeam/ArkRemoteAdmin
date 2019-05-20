@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using ArkRemoteAdmin.Data;
-using BssFramework.Windows.Forms;
+//using BssFramework.Windows.Forms;
 using ArkRcon = ArkRemoteAdmin.Core.ArkRcon;
 
 namespace ArkRemoteAdmin.UserInterface
@@ -14,8 +14,8 @@ namespace ArkRemoteAdmin.UserInterface
         public ServerList()
         {
             InitializeComponent();
-            toolStrip.Renderer = new SevenToolStripRenderer();
-            cmsServer.Renderer = new SevenToolStripRenderer();
+            //toolStrip.Renderer = new SevenToolStripRenderer();
+            //cmsServer.Renderer = new SevenToolStripRenderer();
         }
 
         private void ServerList_Load(object sender, EventArgs e)
@@ -76,15 +76,16 @@ namespace ArkRemoteAdmin.UserInterface
                 }
                 catch (Exception ex)
                 {
-                    new TaskDialog()
-                    {
-                        WindowTitle = "Connection failed",
-                        MainInstruction = ex.Message,
-                        Content = "Make sure that the server is online and configured correctly.",
-                        CommonButtons = TaskDialogCommonButtons.Ok,
-                        MainIcon = TaskDialogIcon.Warning,
-                        PositionRelativeToWindow = true
-                    }.Show(this);
+                    MessageBox.Show(ex.Message);
+                    //new TaskDialog()
+                    //{
+                    //    WindowTitle = "Connection failed",
+                    //    MainInstruction = ex.Message,
+                    //    Content = "Make sure that the server is online and configured correctly.",
+                    //    CommonButtons = TaskDialogCommonButtons.Ok,
+                    //    MainIcon = TaskDialogIcon.Warning,
+                    //    PositionRelativeToWindow = true
+                    //}.Show(this);
                 }
             }
         }
@@ -181,17 +182,18 @@ namespace ArkRemoteAdmin.UserInterface
 
         private DialogResult ShowServerDeletionDialog()
         {
-            TaskDialog taskDialog = new TaskDialog
-            {
-                WindowTitle = "Delete Server",
-                MainInstruction = "Do you really want to delete this server?",
-                Content = "This can not be undone.",
-                CommonButtons = TaskDialogCommonButtons.Yes | TaskDialogCommonButtons.No,
-                MainIcon = TaskDialogIcon.Warning,
-                PositionRelativeToWindow = true
-            };
+            return MessageBox.Show("Do you really want to delete this server?", "Confirm", MessageBoxButtons.YesNo);
+            //TaskDialog taskDialog = new TaskDialog
+            //{
+            //    WindowTitle = "Delete Server",
+            //    MainInstruction = "Do you really want to delete this server?",
+            //    Content = "This can not be undone.",
+            //    CommonButtons = TaskDialogCommonButtons.Yes | TaskDialogCommonButtons.No,
+            //    MainIcon = TaskDialogIcon.Warning,
+            //    PositionRelativeToWindow = true
+            //};
 
-            return (DialogResult)taskDialog.Show(this);
+            //return (DialogResult)taskDialog.Show(this);
         }
 
         #endregion // Internal Methods

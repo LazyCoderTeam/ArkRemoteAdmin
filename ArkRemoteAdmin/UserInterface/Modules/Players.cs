@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BssFramework.Windows.Forms;
+//using BssFramework.Windows.Forms;
 using Rcon;
 using Rcon.Commands;
 using ArkRcon = ArkRemoteAdmin.Core.ArkRcon;
@@ -26,8 +26,8 @@ namespace ArkRemoteAdmin.UserInterface
         {
             InitializeComponent();
 
-            toolStrip.Renderer = new SevenToolStripRenderer();
-            cmsPlayer.Renderer = new SevenToolStripRenderer();
+            //toolStrip.Renderer = new SevenToolStripRenderer();
+            //cmsPlayer.Renderer = new SevenToolStripRenderer();
             syncContext = SynchronizationContext.Current;
 
             ArkRcon.Client.Connected += Client_Connected;

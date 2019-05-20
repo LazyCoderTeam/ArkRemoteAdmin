@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ArkRemoteAdmin.Data;
-using BssFramework.Windows.Forms;
+//using BssFramework.Windows.Forms;
 using Quartz;
 using ArkRcon = ArkRemoteAdmin.Core.ArkRcon;
 
@@ -20,8 +20,8 @@ namespace ArkRemoteAdmin.UserInterface.Modules
         {
             InitializeComponent();
             syncContext = SynchronizationContext.Current;
-            toolStrip.Renderer = new SevenToolStripRenderer();
-            cmsSchedule.Renderer = new SevenToolStripRenderer();
+            //toolStrip.Renderer = new SevenToolStripRenderer();
+            //cmsSchedule.Renderer = new SevenToolStripRenderer();
 
             Quartz.Impl.StdSchedulerFactory.GetDefaultScheduler().ListenerManager.AddJobListener(this);
 

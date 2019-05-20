@@ -16,7 +16,7 @@ namespace ArkRemoteAdmin.UserInterface
         public WizardPageAddTrigger()
         {
             InitializeComponent();
-            toolStrip1.Renderer = new BssFramework.Windows.Forms.SevenToolStripRenderer();
+            //toolStrip1.Renderer = new BssFramework.Windows.Forms.SevenToolStripRenderer();
         }
     }
 }

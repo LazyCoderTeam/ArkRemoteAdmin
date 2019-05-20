@@ -32,7 +32,7 @@
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Server");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSettings));
             this.tblPnl = new System.Windows.Forms.TableLayoutPanel();
-            this.tvMenu = new BssFramework.Windows.Forms.TreeViewEx();
+            this.tvMenu = new System.Windows.Forms.TreeView();
             this.pnlButtons = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
@@ -413,7 +413,7 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tblPnl;
-        private BssFramework.Windows.Forms.TreeViewEx tvMenu;
+        private System.Windows.Forms.TreeView tvMenu;
         private System.Windows.Forms.Panel pnlButtons;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;

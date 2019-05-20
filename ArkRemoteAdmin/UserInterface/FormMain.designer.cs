@@ -30,15 +30,16 @@ namespace ArkRemoteAdmin
         /// </summary>
         private void InitializeComponent()
         {
+            this.Size = new System.Drawing.Size(500, 500);
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            //this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.cmsTray = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.formStateSaver = new BssFramework.Windows.Forms.FormStateSaver();
+            //this.formStateSaver = new BssFramework.Windows.Forms.FormStateSaver();
             this.progressOverlay = new dotNetBase.Windows.Forms.progressOverlay();
             this.panel1 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -94,12 +95,12 @@ namespace ArkRemoteAdmin
             // 
             // notifyIcon
             // 
-            this.notifyIcon.ContextMenuStrip = this.cmsTray;
-            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            this.notifyIcon.Text = "ARK Remote Admin";
-            this.notifyIcon.Visible = true;
-            this.notifyIcon.BalloonTipClicked += new System.EventHandler(this.notifyIcon_BalloonTipClicked);
-            this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
+            //this.notifyIcon.ContextMenuStrip = this.cmsTray;
+            //this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            //this.notifyIcon.Text = "ARK Remote Admin";
+            //this.notifyIcon.Visible = true;
+            //this.notifyIcon.BalloonTipClicked += new System.EventHandler(this.notifyIcon_BalloonTipClicked);
+            //this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
             // 
             // cmsTray
             // 
@@ -143,7 +144,7 @@ namespace ArkRemoteAdmin
             // 
             // formStateSaver
             // 
-            this.formStateSaver.FormToSave = this;
+            //this.formStateSaver.FormToSave = this;
             // 
             // progressOverlay
             // 
@@ -617,7 +618,7 @@ namespace ArkRemoteAdmin
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hideToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private BssFramework.Windows.Forms.FormStateSaver formStateSaver;
+        //private BssFramework.Windows.Forms.FormStateSaver formStateSaver;
         private dotNetBase.Windows.Forms.progressOverlay progressOverlay;
         private System.Windows.Forms.ToolStripStatusLabel tslLog;
         private System.Windows.Forms.Panel panel1;

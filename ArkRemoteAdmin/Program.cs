@@ -3,7 +3,7 @@ using System.Threading;
 using System.Windows.Forms;
 using ArkRemoteAdmin.Data;
 using ArkRemoteAdmin.UserInterface;
-using BssFramework.Windows.Forms;
+//using BssFramework.Windows.Forms;
 using Microsoft.VisualBasic.ApplicationServices;
 using Quartz;
 using Rcon;
@@ -28,8 +28,11 @@ namespace ArkRemoteAdmin
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-            new Program().Run(args);
+            FormMain frmMain = new FormMain();
+            frmMain.Height = 500;
+            frmMain.Width = 500;
+            Application.Run(frmMain);
+            //new Program().Run(args);
 
             scheduler.Shutdown();
         }
@@ -44,15 +47,17 @@ namespace ArkRemoteAdmin
 #if !DEBUG
             ErrorHandler.CaptureUnhandledException(e.Exception);
 #endif
+            System.Diagnostics.Debug.WriteLine("Blah");
+            MessageBox.Show("Error:" + e.Exception.Message);
 
-            TaskDialog taskDialog = new TaskDialog();
-            taskDialog.WindowTitle = "Unhandled Error";
-            taskDialog.MainInstruction = "An unhandled error occured.";
-            taskDialog.Content = "An error report was generated and sent to the developer of this application." + Environment.NewLine + "The error report does not contain any personal information.";
-            taskDialog.CommonButtons = TaskDialogCommonButtons.Ok;
-            taskDialog.MainIcon = TaskDialogIcon.Error;
-            taskDialog.PositionRelativeToWindow = true;
-            taskDialog.Show();
+            //TaskDialog taskDialog = new TaskDialog();
+            //taskDialog.WindowTitle = "Unhandled Error";
+            //taskDialog.MainInstruction = "An unhandled error occured.";
+            //taskDialog.Content = "An error report was generated and sent to the developer of this application." + Environment.NewLine + "The error report does not contain any personal information.";
+            //taskDialog.CommonButtons = TaskDialogCommonButtons.Ok;
+            //taskDialog.MainIcon = TaskDialogIcon.Error;
+            //taskDialog.PositionRelativeToWindow = true;
+            //taskDialog.Show();
         }
 
         public App App { get; private set; }

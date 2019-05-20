@@ -1,4 +1,4 @@
-﻿using BssFramework.Windows.Forms;
+﻿//using BssFramework.Windows.Forms;
 
 namespace ArkRemoteAdmin.UserInterface
 {
@@ -34,7 +34,7 @@ namespace ArkRemoteAdmin.UserInterface
             System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Online Players", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Banned Players", System.Windows.Forms.HorizontalAlignment.Left);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Players));
-            this.lvPlayers = new BssFramework.Windows.Forms.ListViewEx();
+            this.lvPlayers = new System.Windows.Forms.ListView();
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colSteamId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cmsPlayer = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -302,7 +302,7 @@ namespace ArkRemoteAdmin.UserInterface
 
         #endregion
 
-        private BssFramework.Windows.Forms.ListViewEx lvPlayers;
+        private System.Windows.Forms.ListView lvPlayers;
         private System.Windows.Forms.ColumnHeader colName;
         private System.Windows.Forms.ColumnHeader colSteamId;
         private System.Windows.Forms.ToolStrip toolStrip;
